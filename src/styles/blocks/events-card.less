@@ -1,10 +1,15 @@
 .events-card {
     display: flex;
-    width: 100%;
-    margin: o 30px 120px;
-    max-width: 405px;
+    width: 405px;
+    max-width: 100%;
     min-width: 280px; 
     width: calc(33.333% - 60px);  
+
+    &__link:hover,
+    &__title {
+      color: #BC3324;
+      text-decoration-color: #BC3324;
+    }
 
     &__link {
         display: flex;
@@ -16,7 +21,7 @@
      
      &__picture {
         display: block;
-        margin-bottom: 25px;
+        margin: 0 0 25px;
         position: relative;
         width: 100%;
         font-size: 0;
@@ -41,4 +46,27 @@
         object-fit: cover; 
        
       }
-}
+      &__title {
+        margin: 0 0 15px;
+        min-height: 66px;
+        color: #1F1E1E;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        text-decoration: underline transparent;
+        transition: color 0.2s, text-decoration-color 0.2s;
+      }
+      
+      &__description {
+        margin: 0 0 auto;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      
+      &__time {
+        margin: 15px 0 0;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
